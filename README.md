@@ -1,70 +1,90 @@
-# Getting Started with Create React App
+# Expense Tracker
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Expense Tracker is a full-stack web application that allows users to track their income and expenses, view data visualizations (bar, pie, line charts), and manage financial records securely. The system includes user authentication and a responsive user interface for a seamless experience.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Add/Edit/Delete Transactions**: Users can manage their income and expense records easily.
+- **Authentication**: Secure login/logout system using tokens stored in localStorage.
+- **Charts and Analytics**: Visualize your spending using bar, pie, and line charts.
+- **Responsive UI**: Built with React and Material UI (MUI) for a polished, mobile-friendly interface.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Frontend**: React.js (Create React App), Material UI (MUI)
+- **Backend**: Go (Golang), MySQL
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## Prerequisites
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Before running the project, make sure you have:
 
-### `npm run build`
+- Go (Golang) installed: [Download Go](https://go.dev/dl/)
+- Node.js installed: [Download Node.js](https://nodejs.org/)
+- A running MySQL instance (local or cloud-based)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Backend Setup
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository:
 
-### `npm run eject`
+```bash
+git clone https://github.com/riyavij2001/TrackMyStock.git
+cd TrackMyStock/backend-go
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Start the backend server:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+make run
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Configure MySQL:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Edit the database connection settings in `db/db.go`.
+- Ensure your database is created and accessible by the backend.
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Frontend Setup
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+1. Navigate to the frontend directory:
 
-### Code Splitting
+```bash
+cd ../frontend
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2. Install dependencies:
 
-### Analyzing the Bundle Size
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Configure API endpoints:
 
-### Making a Progressive Web App
+- Update API URLs inside relevant frontend files to point to your backend server (e.g., `http://localhost:8181/api/...`).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+4. Start the frontend server:
 
-### Advanced Configuration
+```bash
+npm start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+> This will launch the app at: [http://localhost:3000](http://localhost:3000)
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Running the Application
 
-### `npm run build` fails to minify
+Once both backend and frontend are running:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Visit [http://localhost:3000](http://localhost:3000)
+- Sign up or log in to access your dashboard
+- Add income and expense transactions
+- View financial charts to monitor trends
+
+
+## Project URL
+[Roadmap.sh](https://roadmap.sh/projects/expense-tracker-api)
